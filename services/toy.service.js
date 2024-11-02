@@ -33,7 +33,7 @@ function query(filterBy = { name: '' }) {
 
 function getById(toyId) {
     const toy = toys.find(toy => toy._id === toyId)
-    toy.msgs = 'I love being a toy!'
+    toy.msgs = ['I love being a toy!']
     return Promise.resolve(toy)
 }
 
