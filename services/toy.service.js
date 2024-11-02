@@ -20,7 +20,7 @@ function query(filterBy = { name: '' }) {
     if (filterBy.inStock) {
         toysToReturn = toysToReturn.filter(toy => toy.inStock === filterBy.inStock)
     }
-    if (filterBy.labels) {
+    if (filterBy.labels.length > 0) {
         toysToReturn = toysToReturn.filter(toy => toy.labels.some(label => filterBy.labels.includes(label)))
     }
 
